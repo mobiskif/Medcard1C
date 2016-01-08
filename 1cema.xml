@@ -1,0 +1,875 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УниверсальноеПриложение" id="434a12f6-2b3e-49fe-b165-332c46c4bf3c" defaultLanguage="Language.Русский" version="0.1.3" scriptVariant="Russian">
+	<synonym>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Универсальное приложение ™</v8:content>
+		</v8:item>
+	</synonym>
+	<language name="Русский" id="b431cd25-46e0-438b-9379-1e7a10d30658" languageCode="ru">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Русский</v8:content>
+			</v8:item>
+		</synonym>
+	</language>
+	<vendor>Фирма "dpSoft"</vendor>
+	<briefInformation>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Универсальное мобильное приложение</v8:content>
+		</v8:item>
+	</briefInformation>
+	<detailedInformation>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Универсальное приложение для мобильных платформ</v8:content>
+		</v8:item>
+	</detailedInformation>
+	<logo xsi:type="xs:base64Binary">iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAADAFBMVEWAAAAAAAAA
+gACAgAAAAICAAIAAgIDAwMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABA
+QABgQACAQACgQADAQADgQAAAYAAgYABAYABgYACAYACgYADAYADgYAAAgAAggABA
+gABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADAoADgoAAAwAAgwABA
+wABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBA
+AEBgAECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBA
+QEBgQECAQECgQEDAQEDgQEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBA
+gEBggECAgECggEDAgEDggEAAoEAgoEBAoEBgoECAoECgoEDAoEDgoEAAwEAgwEBA
+wEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA4EDg4EAAAIAgAIBA
+AIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBA
+QIBgQICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBA
+gIBggICAgICggIDAgIDggIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBA
+wIBgwICAwICgwIDAwIDgwIAA4IAg4IBA4IBg4ICA4ICg4IDA4IDg4IAAAMAgAMBA
+AMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDAIMDgIMAAQMAgQMBA
+QMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBA
+gMBggMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBA
+wMBgwMCAwMCgwMD/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A//////9M/+JIAAAA
+AXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAH
+dElNRQffCwETBDJSC9uDAAABVklEQVRYw92WPXLEMAiF5QpfLW1uhktRcjQooXSd
+IGuS2SojzyucWerl0+PvrVv730EEAhQF8Pm0gjcAGAggSwyQgQIysBqCThDwlSgA
+LCEfB7CgAMIA5KAjQe/vF+Clmp35Ru2cXsn0ewk0unFDjoqIZqX9LBSrWi/cmoid
+u5jJQeTz9ah0NV++TNKupSF4KiA2L4Jprnahi4uJGOVI2Co+Tbfi0aoArhejAD4y
+tg+3KD2miwCuCiKTVOYakIdZkFm+TvWvOOr3ESZ8XmZAMQDVhNUp8uh4jbFKjmub
+tNRXkC4vgfJRQ6A2HZW4D0Lc2GJTYa36Z815tjHP446RxRQ8/RA4KIIB116jAI6G
+RUcBjVFARwHg/3NNAf3URBUQqKCcAZthggoIBUQStkjlag7OIMEehKJjdPBjNy5n
+Rk6JQQWngKcQiroBPw0IR+2gPQ1AK1iIbyiA1axNVGtxAAAAAElFTkSuQmCC</logo>
+	<copyright>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Dmitry Parkhimovich ©</v8:content>
+		</v8:item>
+	</copyright>
+	<vendorInformationAddress>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>http://dpsoft.com</v8:content>
+		</v8:item>
+	</vendorInformationAddress>
+	<configurationInformationAddress>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>http://univers.dpsoft.com</v8:content>
+		</v8:item>
+	</configurationInformationAddress>
+	<mainModule version="1" startAddr="0">
+		<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+		<bsch:cmdOperand>0,0</bsch:cmdOperand>
+	</mainModule>
+	<sessionModule version="1">
+		<bsch:cmdOpCode>22</bsch:cmdOpCode>
+		<bsch:cmdOperand>0</bsch:cmdOperand>
+	</sessionModule>
+	<startPageWorkingArea>
+		<workingAreaTemplate>TwoColumnsEqualWidth</workingAreaTemplate>
+		<leftColumn>
+			<form>Document.РентгеновскиеСнимки.Form.ФормаСписка</form>
+			<height>10</height>
+		</leftColumn>
+	</startPageWorkingArea>
+	<commonCommand name="ПолучитьКоординаты" id="8f2a4529-3969-4ebc-ad19-20eceaf8bdc3">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Получить координаты</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,3,2,4,18,21,5,1,16,1,3,12,18,19,1,1,3,99,16,1,4,99,3,25,71,24,4,24,3,12,12,24,4,24,3,12,12,24,18,19,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>22,2,0,1,1,0,0,22,0,23,2,2,1,1,23,24,3,0,0,26,3,0,3,0,0,0,4,0,2,2,5,0,4,0,2,2,5,0,1,2,26,28,0,0</bsch:cmdOperand>
+			<bsch:constant>SПолучитьПоследнееМестоположение</bsch:constant>
+			<bsch:constant>Snetwork</bsch:constant>
+			<bsch:constant>SКоординаты</bsch:constant>
+			<bsch:constant>SВремя обновления = </bsch:constant>
+			<bsch:constant>S </bsch:constant>
+			<bsch:constant>SДолгота</bsch:constant>
+			<bsch:variable name="СредстваГеопозиционирования" isExternal="true"/>
+			<bsch:procedure name="ОбработкаКоманды" parametersCount="2" startAddr="0">
+				<bsch:variable name="ПараметрКоманды" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПараметрыВыполненияКоманды" isLocal="true" isParam="true"/>
+				<bsch:variable name="Данные" isLocal="true"/>
+				<bsch:variable name="ДатаНачало" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПоказатьНаКарте" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
+		</clientModule>
+		<serverModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</serverModule>
+		<group>ActionsPanelTools</group>
+		<parameterType/>
+	</commonCommand>
+	<document name="РентгеновскиеСнимки" id="a7da2b0c-3136-4965-a93f-218b40ffa5b0">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Рентгеновские снимки</v8:content>
+			</v8:item>
+		</synonym>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</objectModule>
+		<inputByString>Number</inputByString>
+		<defaultObjectForm>Document.РентгеновскиеСнимки.Form.ФормаДокумента</defaultObjectForm>
+		<defaultListForm>Document.РентгеновскиеСнимки.Form.ФормаСписка</defaultListForm>
+		<attribute name="ДанныеФайлаКартинки" id="5bd63ecf-84f1-485b-a3ca-4be893acd90a">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные файла картинки</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>v8:ValueStorage</v8:Type>
+			</type>
+		</attribute>
+		<form name="ФормаСписка" id="27c620d6-a47c-49a1-9586-9cf9fbec498c">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма списка</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="28">
+					<bsch:cmdOpCode>1,3,2,12,3,18,21,5,1,18,21,5,1,16,1,3,12,3,18,51,16,1,3,18,20,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>43,2,0,0,0,1,1,0,43,0,2,0,43,0,44,2,3,1,1,4,0,45,2,0,5,45,46,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SРентгеновскиеСнимки</bsch:constant>
+					<bsch:constant>SНайтиПоНомеру</bsch:constant>
+					<bsch:constant>SПолучитьОбъект</bsch:constant>
+					<bsch:constant>SДанныеФайлаКартинки</bsch:constant>
+					<bsch:constant>SХранилищеЗначения</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:variable name="Документы" isExternal="true"/>
+					<bsch:procedure name="ДобавитьКартинку" parametersCount="2" startAddr="0">
+						<bsch:variable name="Номер" isLocal="true" isParam="true"/>
+						<bsch:variable name="Картинка" isLocal="true" isParam="true"/>
+						<bsch:variable name="Документ" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="96">
+					<bsch:cmdOpCode>1,2,2,12,12,4,18,19,5,1,16,1,2,2,12,12,16,1,22,1,3,8,16,1,3,2,18,21,5,1,16,1,3,8,33,29,40,44,1,3,3,18,21,5,1,16,1,2,3,18,19,1,1,2,12,18,20,1,1,45,39,1,106,18,19,1,1,46,39,1,1,3,6,16,1,22,1,2,12,12,18,19,1,1,3,18,19,1,1,2,12,12,3,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>3,0,1,0,1,2,2,1,0,3,0,4,2,3,3,4,0,5,0,11,2,0,0,13,3,4,0,5,0,13,0,14,3,0,0,0,69,61,16,4,3,0,6,0,16,0,19,2,4,2,3,19,21,1,7,0,8,21,24,1,68,23,0,1,4,23,24,0,69,25,39,1,0,0,40,0,51,1,0,1,1,4,51,52,0,1,4,52,53,1,0,1,0,0,54,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SФотожурнал</bsch:constant>
+					<bsch:constant>SТекущаяСтрока</bsch:constant>
+					<bsch:constant>SДанныеФайлаКартинки</bsch:constant>
+					<bsch:constant>SТекущиеДанные</bsch:constant>
+					<bsch:constant>SНомер</bsch:constant>
+					<bsch:constant>SСделатьФотоснимок</bsch:constant>
+					<bsch:constant>SПолучитьДвоичныеДанные</bsch:constant>
+					<bsch:constant>SТекущаяКартинка</bsch:constant>
+					<bsch:constant>SОбновить</bsch:constant>
+					<bsch:variable name="ТекущаяКартинка" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="ТекущийНомер" isExternal="true"/>
+					<bsch:variable name="ТекущийЭлемент" isExternal="true"/>
+					<bsch:variable name="СредстваМультимедиа" isExternal="true"/>
+					<bsch:procedure name="СписокПриАктивизацииСтроки" parametersCount="1" startAddr="0">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПолучитьНавигационнуюСсылку" isFunction="true" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="ТекущаяКартинкаНажатие" parametersCount="2" startAddr="19">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:variable name="Результат" isLocal="true"/>
+						<bsch:variable name="ДанныеМультимедиа" isLocal="true"/>
+						<bsch:variable name="ДвоичныеДанные" isLocal="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ДобавитьКартинку" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ФотожурналОбработкаЗаписиНового" parametersCount="3" startAddr="76">
+						<bsch:variable name="НовыйОбъект" isLocal="true" isParam="true"/>
+						<bsch:variable name="Источник" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="ТекущаяКартинка">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущая картинка</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ТекущийНомер">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Текущий номер</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Файл">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Файл</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Фотожурнал">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Фотожурнал</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Document.РентгеновскиеСнимки</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+						<mf:autoMenuData>
+							<mf:autofill>false</mf:autofill>
+						</mf:autoMenuData>
+					</mf:autoCommandBar>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:usualData group="Horizontal">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:slaveItemsWidth>LeftNarrow</mf:slaveItemsWidth>
+							<mf:slaveItemsWidth>LeftNarrow</mf:slaveItemsWidth>
+						</mf:usualData>
+						<mf:table name="Фотожурнал" dataPath="Фотожурнал" defaultItem="true">
+							<mf:rowPictureDataPath>Фотожурнал.DefaultPicture</mf:rowPictureDataPath>
+							<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+							<mf:autoCommandBar name="ФотожурналКоманднаяПанель" type="AutoCommandBar">
+								<mf:autoMenuData>
+									<mf:autofill>false</mf:autofill>
+								</mf:autoMenuData>
+								<mf:button name="ФотожурналСоздать" type="CommandBarButton" commandName="Form.Item.Фотожурнал.StandardCommand.Create"/>
+							</mf:autoCommandBar>
+							<mf:contextMenu name="ФотожурналКонтекстноеМеню" type="ContextMenu"/>
+							<mf:event handler="СписокПриАктивизацииСтроки" name="OnActivateRow"/>
+							<mf:event handler="ФотожурналОбработкаЗаписиНового" name="NewWriteProcessing"/>
+							<mf:field name="ФотожурналДата" kind="LabelField" dataPath="Фотожурнал.Date">
+								<mf:contextMenu name="ФотожурналДатаКонтекстноеМеню" type="ContextMenu"/>
+								<mf:textData>
+									<mf:format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</mf:format>
+									<mf:horizontalStretch>false</mf:horizontalStretch>
+								</mf:textData>
+							</mf:field>
+							<mf:field name="ФотожурналНомер" kind="LabelField" dataPath="Фотожурнал.Number" defaultItem="true">
+								<mf:contextMenu name="ФотожурналНомерКонтекстноеМеню" type="ContextMenu"/>
+							</mf:field>
+						</mf:table>
+						<mf:field name="ТекущаяКартинка" kind="PictureField" dataPath="ТекущаяКартинка">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="ТекущаяКартинкаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:imageData hyperlink="true">
+								<mf:event handler="ТекущаяКартинкаНажатие" name="Click"/>
+							</mf:imageData>
+						</mf:field>
+					</mf:group>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаДокумента" id="2c7b78ed-c6c5-4e42-b779-15ed86510854">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма документа</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="49">
+					<bsch:cmdOpCode>1,3,2,12,3,18,21,5,1,18,21,5,1,16,1,3,12,17,45,39,1,22,1,3,2,12,18,21,5,1,16,1,3,12,99,16,1,3,18,20,1,1,3,12,17,45,39,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>15,1,0,0,0,1,1,0,15,0,2,0,15,0,16,1,3,0,0,20,17,0,20,0,0,0,0,4,0,20,0,21,0,5,0,0,22,0,0,6,22,23,0,3,0,0,47,24,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SРентгеновскиеСнимки</bsch:constant>
+					<bsch:constant>SНайтиПоНомеру</bsch:constant>
+					<bsch:constant>SПолучитьОбъект</bsch:constant>
+					<bsch:constant>SСсылка</bsch:constant>
+					<bsch:constant>SСоздатьДокумент</bsch:constant>
+					<bsch:constant>SДата</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:variable name="Документы" isExternal="true"/>
+					<bsch:procedure name="ПолучитьДокумент" isFunction="true" parametersCount="1" startAddr="0">
+						<bsch:variable name="Номер" isLocal="true" isParam="true"/>
+						<bsch:variable name="Документ" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="СоздатьДокумент" isFunction="true" parametersCount="0" startAddr="22">
+						<bsch:variable name="Документ" isLocal="true"/>
+					</bsch:procedure>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="39">
+					<bsch:cmdOpCode>1,2,12,65,40,1,18,19,5,1,18,19,1,1,3,7,16,39,1,3,2,12,18,19,5,1,16,1,2,3,4,18,19,5,1,16,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>4,0,0,0,18,6,0,2,0,6,1,1,6,7,0,0,0,36,9,1,0,0,1,3,0,9,0,10,1,1,1,2,4,0,10,0,11,12,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SНомер</bsch:constant>
+					<bsch:constant>SДанныеФайлаКартинки</bsch:constant>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:variable name="Картинка" isExternal="true"/>
+					<bsch:procedure name="ПриОткрытии" parametersCount="1" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="Документ" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ОповеститьОЗаписиНового" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="СоздатьДокумент" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ПолучитьДокумент" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="ПолучитьНавигационнуюСсылку" isFunction="true" isExternal="true" parametersCount="3" startAddr="0"/>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:Type>cfg:DocumentObject.РентгеновскиеСнимки</v8:Type>
+						</mf:type>
+						<mf:main>true</mf:main>
+						<mf:storedData>true</mf:storedData>
+						<mf:useAalways>RegisterRecords</mf:useAalways>
+					</mf:attribute>
+					<mf:attribute name="Картинка">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Картинка</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:event handler="ПриОткрытии" name="OnOpen"/>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:usualData group="Horizontal">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="Номер" kind="InputField" dataPath="Объект.Number">
+							<mf:enabled>false</mf:enabled>
+							<mf:contextMenu name="НомерКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
+							<mf:enabled>false</mf:enabled>
+							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:group>
+					<mf:group name="Группа2" type="UsualGroup">
+						<mf:usualData>
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="КартинкаНаФорме" kind="PictureField" dataPath="Картинка">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="КартинкаНаФормеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:group>
+				</mf:mainElement>
+			</form>
+		</form>
+	</document>
+	<document name="Давление" id="8130206c-e83f-4729-8c99-5af01396c685">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Давление</v8:content>
+			</v8:item>
+		</synonym>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</objectModule>
+		<standardAttribute name="Posted">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Ref">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="DeletionMark">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Date">
+			<passwordMode>false</passwordMode>
+			<format>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=dd.MM.yyyy</v8:content>
+				</v8:item>
+			</format>
+			<editFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=dd.MM.yyyy</v8:content>
+				</v8:item>
+			</editFormat>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>ShowError</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Number">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<inputByString>Number</inputByString>
+		<defaultListForm>Document.Давление.Form.ФормаСписка</defaultListForm>
+		<attribute name="Систолическое" id="b0ddde1a-6a37-4a56-acdc-6ba475692bdf">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Систолическое</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</attribute>
+		<attribute name="Диастолическое" id="c8b5833f-98c2-4144-9572-f7369a346e23">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диастолическое</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</attribute>
+		<attribute name="Город" id="9240eb62-1d26-450c-a1f1-d5332dfa57c4">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Город</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</type>
+			<fillingValue xsi:type="xs:string"/>
+		</attribute>
+		<attribute name="Улица" id="41377a59-1920-48e3-95fe-219949425c83">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Улица</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</type>
+			<fillingValue xsi:type="xs:string"/>
+		</attribute>
+		<attribute name="Дом" id="e3121605-8af0-4035-93f9-d29d9a41ac2a">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дом</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>10</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</type>
+			<fillingValue xsi:type="xs:string"/>
+		</attribute>
+		<form name="ФормаСписка" id="9ca3b72c-4abf-45a4-adc3-ef76b51c7beb">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма списка</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="64">
+					<bsch:cmdOpCode>1,3,4,16,1,3,4,16,1,3,4,16,1,3,3,4,24,3,12,12,24,4,24,3,12,12,24,4,24,16,1,3,3,4,24,3,24,4,24,16,1,2,12,3,16,1,22,1,3,4,3,12,12,24,4,24,16,1,2,12,3,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>5,1,0,0,6,2,1,0,7,3,2,0,21,3,3,3,0,0,4,5,0,6,0,0,4,7,0,8,0,0,23,3,3,9,0,1,0,10,0,0,45,0,11,3,0,46,0,50,1,12,0,4,5,0,13,0,0,99,0,11,1,0,100,0,0,0</bsch:cmdOperand>
+					<bsch:constant>N12</bsch:constant>
+					<bsch:constant>SABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA</bsch:constant>
+					<bsch:constant>S&lt;html&gt;&lt;head&gt;
+	&lt;meta http-equiv=" content=" text=" charset="UTF-8"&gt;   
+	&lt;script src="http://maps.google.com/maps?file=api&amp;key=ABQIAAAAzr2EBOXUKnm_jVnk0OJI7xSosDVG8KKPE1-m51RBrvYughuyMxQ-i1QfUnH94QxWIa6N4U6MouMmBA" type="text/javascript"&gt;&lt;/script&gt;
+	&lt;script type="text/javascript"&gt;
+	var map = null;
+	var geocoder = null;
+	var marker = null;
+	function initialize() {
+	if (GBrowserIsCompatible()) {
+	map = new GMap2(document.getElementById("map_canvas"));
+	geocoder = new GClientGeocoder();
+	var customUI = map.getDefaultUI();
+	customUI.maptypes.hybrid = false;
+	map.setUI(customUI);</bsch:constant>
+					<bsch:constant>S
+    showAddress("</bsch:constant>
+					<bsch:constant>SТекущиеДанные</bsch:constant>
+					<bsch:constant>SГород</bsch:constant>
+					<bsch:constant>S","</bsch:constant>
+					<bsch:constant>SУлица</bsch:constant>
+					<bsch:constant>S");</bsch:constant>
+					<bsch:constant>S
+      }
+    }
+
+    function showAddress(address,comment) {
+      if (geocoder) {
+        geocoder.getLatLng(
+          address,
+          function(point) {
+            if (!point) {
+              alert(address + " не найден");
+            } else {
+             map.setCenter(point,</bsch:constant>
+					<bsch:constant>S);
+        var markerOptions = { title:comment };  
+             var marker = new GMarker(point,markerOptions);
+             map.addOverlay(marker); 
+            }
+          }
+        );
+      }
+    }
+    &lt;/script&gt;&lt;/meta&gt;&lt;/head&gt;&lt;body&gt;&lt;div id="map_canvas"&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</bsch:constant>
+					<bsch:constant>SДанныеHTMLДокумента</bsch:constant>
+					<bsch:constant>S&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Geocoding service&lt;/title&gt;
+    &lt;meta name="viewport" content="initial-scale=1.0, user-scalable=no"&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=9" &gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;style&gt;
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    &lt;/style&gt;
+&lt;script type="text/javascript"&gt;
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 9,
+    center: {lat: -34.397, lng: 150.644}
+  });
+  var geocoder = new google.maps.Geocoder();
+  geocodeAddress(geocoder, map);
+}
+
+function geocodeAddress(geocoder, resultsMap) {
+    geocoder.geocode({'address': '</bsch:constant>
+					<bsch:constant>S'}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+     &lt;div id="map"&gt;&lt;/div&gt; 
+&lt;script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA50DV01TSNBwxRakedCNrD0D3lU6CFIxw&amp;signed_in=true&amp;callback=initMap"
+        async defer&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;	
+	</bsch:constant>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:procedure name="СписокПриАктивизацииСтроки2" parametersCount="1" startAddr="0">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="МасштабКарты" isLocal="true"/>
+						<bsch:variable name="apikey" isLocal="true"/>
+						<bsch:variable name="ТекстДокумента" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="СписокПриАктивизацииСтроки" parametersCount="1" startAddr="47">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ТекстДокумента" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Document.Давление</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="ДанныеHTMLДокумента">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Данные HTMLДокумента</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа пользовательских настроек</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:verticalStretch>false</mf:verticalStretch>
+						<mf:usualData>
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+					</mf:group>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:representation>List</mf:representation>
+						<mf:initialTreeView>ExpandTopLevel</mf:initialTreeView>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:event handler="СписокПриАктивизацииСтроки" name="OnActivateRow"/>
+						<mf:field name="Дата" kind="LabelField" dataPath="Список.Date" defaultItem="true">
+							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Номер" kind="LabelField" dataPath="Список.Number">
+							<mf:contextMenu name="НомерКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Систолическое" kind="LabelField" dataPath="Список.Систолическое">
+							<mf:contextMenu name="СистолическоеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Диастолическое" kind="LabelField" dataPath="Список.Диастолическое">
+							<mf:contextMenu name="ДиастолическоеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Город" kind="LabelField" dataPath="Список.Город">
+							<mf:contextMenu name="ГородКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Улица" kind="LabelField" dataPath="Список.Улица">
+							<mf:contextMenu name="УлицаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Дом" kind="LabelField" dataPath="Список.Дом">
+							<mf:contextMenu name="ДомКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:table>
+					<mf:field name="ПолеHTMLДокумента" kind="HTMLDocumentField" dataPath="ДанныеHTMLДокумента">
+						<mf:contextMenu name="ПолеHTMLДокументаКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+				</mf:mainElement>
+			</form>
+		</form>
+	</document>
+	<requiredPermission>
+		<permission>Multimedia</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Location</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Contacts</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Calendars</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Telephony</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>PushNotification</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>LocalNotification</permission>
+		<use>false</use>
+	</requiredPermission>
+</MobileApp>
