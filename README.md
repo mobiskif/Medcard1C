@@ -9,7 +9,7 @@
 </p>
 
 <h5>Скриншот ПК</h5>
-<img src="https://github.com/mobiskif/Medcard1C/Medcard1C.png" />
+<img src="Medcard1C.png" />
 
 <h5>Скриншот Android</h5>
 <img src="https://github.com/mobiskif/Medcard1C/Screenshot.png" width="50%" />
