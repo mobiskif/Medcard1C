@@ -7,10 +7,9 @@
 <li>Кросплатформенная сборка под WindowsPhone и Android</li>
 </ul>
 </p>
-<p>
+
 <h5>Скриншот ПК</h5>
-<img src="https://github.com/mobiskif/Medcard1C/blob/master/Medcard1C.png" />
-</p>
+<img src="https://github.com/mobiskif/Medcard1C/Medcard1C.png" />
+
 <h5>Скриншот Android</h5>
-<img src="https://github.com/mobiskif/Medcard1C/blob/master/Screenshot.png" width="50%" />
-</p>
+<img src="https://github.com/mobiskif/Medcard1C/Screenshot.png" width="50%" />
